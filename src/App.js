@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Link, Routes,Route } from 'react-router-dom'
+import AddSupplierMUI from './muiSample/AddSupplierMUI'
+import SuppliersDataGrid from './muiSample/SuppliersDataGrid'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+  <ul style={{display:'flex', justifyContent:'space-evenly'}}>
+    <Link to="/suppliers">Supplier</Link>
+    <Link to="/add-supplier"> Add Supplier</Link>
+
+  </ul>
+   <Routes>
+      <Route path='/add-supplier' element={<AddSupplierMUI/>}/> 
+      <Route path='/suppliers' element={<SuppliersDataGrid/>}/> 
+   </Routes>
+  </>
 }
 
-export default App;
+export default App
