@@ -21,15 +21,15 @@ function App() {
     <Routes>
 
       {/* Product */}
-      <Route path='/products' element={<List/>}/>
+      {/* <Route path='/products' element={<List/>}/>
       <Route path='/products/add' element={<Add/>}/>
-      <Route path='/products/update/:id' element={<Update/>}/>
+      <Route path='/products/update/:id' element={<Update/>}/> */}
 
       {/* Category */}
       <Route path='/category' element={<CategoryList/>}/>
       <Route path='/category/add' element={<CategoryAdd/>}/>
       <Route path='/category/detail/:id' element={<CategoryDetail/>}/>
-      <Route path='/ctegory/update/:id' element={<CategoryUpdate/>}/>
+      <Route path='/category/update/:id' element={<CategoryUpdate/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
   </DashboardLayout>
