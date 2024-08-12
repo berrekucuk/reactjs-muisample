@@ -37,6 +37,7 @@ function DashboardLayout(props) {
                 <ListItem key={1} disablePadding>
                     <ListItemButton sx={{ textAlign: 'center' }}>
                         <ListItemText primary={"Products"} />
+                        <ListItemText primary={"Category"} />
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -72,6 +73,11 @@ function DashboardLayout(props) {
                                 Products
                             </Button>
                         </Link>
+                        <Link to='/category'>
+                            <Button key={1} sx={{ color: '#fff' }}>
+                                Category
+                            </Button>
+                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -96,6 +102,7 @@ function DashboardLayout(props) {
                 <Toolbar />
 
                 {props.children}
+                
 
             </div>
         </Box>

@@ -2,6 +2,7 @@ import { Stack, TextField, Button} from '@mui/material'
 import React, { useState } from 'react'
 import { baseService } from '../../api/baseService'
 import { useNavigate } from 'react-router-dom'
+import { useSnackbar } from 'notistack'
 
 function Add() {
 
@@ -12,6 +13,8 @@ function Add() {
 
     const navigate = useNavigate()
 
+    const {enqueueSnackbar} = useSnackbar()
+
     const create = () =>{
         baseService.create("products",{
             name,
@@ -20,6 +23,9 @@ function Add() {
             quantityPerUnit
         })
         .then(res =>{
+            enqueueSnackbar("Success!!", {
+                variant:"success" //Gelen uyarının rengini bu şekilde ayarlayabiliriz.
+            })
             navigate("/products")
         })
     }
