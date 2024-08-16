@@ -1,11 +1,11 @@
 import React from 'react'
 import useSWR from 'swr'
-import { axiosIntance } from '../../api/axiosInstance'
+import { axiosInstance } from '../../api/axiosInstance'
 import { Box, CircularProgress } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 
 
-const fetcher = url => axiosIntance.get(url).then(res => res.data)
+const fetcher = url => axiosInstance.get(url).then(res => res.data)
 
 function ListSWR() {
 

@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
+import { FavoritesProvider } from './context/FavoritesContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <SnackbarProvider>
-            <App />
-        </SnackbarProvider>
+        <FavoritesProvider>
+            <SnackbarProvider>
+                <App />
+            </SnackbarProvider>
+        </FavoritesProvider>
     </BrowserRouter>
 );
 

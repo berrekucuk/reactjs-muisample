@@ -1,6 +1,6 @@
 import axios from "axios";
 
 
-export const axiosIntance = axios.create({
+export const axiosInstance = axios.create({
     baseURL: "https://northwind.vercel.app/api/"
 })
