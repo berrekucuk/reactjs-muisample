@@ -15,6 +15,7 @@ function Navbar() {
         <Link style={{ color: "white", textDecoration: "none" }} to="/favorites"><Typography variant="h5">Favorites <span style={{color:"red"}}>({favorites.length})</span></Typography></Link>
         <Link style={{ color: "white", textDecoration: "none" }} to="/customers"><Typography variant="h5">Customers</Typography></Link>
         <Link style={{ color: "white", textDecoration: "none" }} to="/todos"><Typography variant="h5">Todos</Typography></Link>
+        <Link style={{ color: "white", textDecoration: "none" }} to="/posts"><Typography variant="h5">Posts</Typography></Link>
         
 
         

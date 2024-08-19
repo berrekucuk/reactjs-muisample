@@ -41,6 +41,7 @@ function App() {
         <Route path='/customers' element={<CustomerList />} />
         <Route path='/customers/add' element={<CustomerAdd />} />
         <Route path='/todos' element={<Todos />} />
+        <Route path='/posts' element={<Posts/>}/>
         <Route path='/favorites' element={<Favorites />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
