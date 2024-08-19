@@ -17,6 +17,8 @@ import CustomerList from './pages/customer/CustomerList'
 import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
 import Favorites from './pages/Favorites'
+import CustomerAdd from './pages/customer/CustomerAdd'
+import Todos from './pages/todos/Todos'
 
 function App() {
   return <>
@@ -37,6 +39,8 @@ function App() {
 
         {/* Customer */}
         <Route path='/customers' element={<CustomerList />} />
+        <Route path='/customers/add' element={<CustomerAdd />} />
+        <Route path='/todos' element={<Todos />} />
         <Route path='/favorites' element={<Favorites />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

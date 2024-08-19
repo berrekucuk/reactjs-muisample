@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { axiosInstance } from '../../api/axiosInstance'
 import { DataGrid } from '@mui/x-data-grid'
 import { Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 function CustomerList() {
 
@@ -56,6 +57,8 @@ function CustomerList() {
 
   return <>
     <div style={{ height: 400, width: '100%' }}>
+      <Link to="/customers/add">Add Customer</Link>
+      <hr/>
       <DataGrid
         rows={customers}
         columns={columns}
